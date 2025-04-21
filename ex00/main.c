@@ -11,7 +11,7 @@ int main(int ac, char **av)
     if (ac == 2)
     {
         fl = open(av[1], O_RDONLY);
-        if (!fl)
+        if (fl == -1)
             ft_putstr("Cannot read file.");
         else
         {
